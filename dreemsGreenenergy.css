@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+.logo {
+    height: auto;
+    width: 150px;
+}
 /* Header Styles */
 header {
     background-color: #2C3E50;
@@ -54,6 +58,7 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     padding: 120px 20px;
+    height: 600px;
 }
 
 #hero .hero-content {
