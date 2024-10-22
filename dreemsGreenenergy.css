@@ -6,9 +6,9 @@
 }
 
 body {
-    
+
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 .companyLogo {
@@ -57,98 +57,74 @@ nav ul li a:hover {
 
 /* Hero Section Styles */
 
-.hero-section {
-    width: 100%;
+.hero {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    background-color: #000;
-    color: #fff;
-    min-height: 100vh;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
 }
 
 .hero-image {
-    width: 100%;
-    height: 60vh; /* Adjust the height of the image container */
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60%;
+    height: 100%;
 }
 
-.hero-placeholder {
+.hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .hero-content {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: #000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
+    padding: 40px;
+    background-color: #1a1a1a;
 }
 
-.hero-content h1 {
+.text-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     font-weight: bold;
-    max-width: 800px;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.hero-content p {
+.text-content p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    max-width: 700px;
-    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #cccccc;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
-    justify-content: center;
 }
 
-.hero-buttons .btn {
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+.btn {
     text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero-buttons .btn:hover {
-    background-color: #fff;
-    color: #000;
+.btn:hover {
+    background-color: white;
+    color: black;
 }
 
-/* Make the design responsive */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero {
+        flex-direction: column;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-buttons .btn {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    .hero-placeholder {
+    .hero-image, .hero-content {
         width: 100%;
     }
 }
+
 
 /* About Section Styles */
 #about {
