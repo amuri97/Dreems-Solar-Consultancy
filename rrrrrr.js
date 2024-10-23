@@ -138,17 +138,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Function to handle Contact Form Submission (Newly Added)
-function handleContactFormSubmit(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Retrieve form values
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const message = event.target.message.value;
-
-    // Display an alert or process the form data as needed
-    alert(`Thank you, ${name}! Your message has been received. We will get back to you at ${email}.`);
-
-    // Optionally, you could add functionality here to send the data to a server or use an API
-}
