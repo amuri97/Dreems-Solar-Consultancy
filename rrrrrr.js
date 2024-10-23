@@ -65,13 +65,90 @@ function createCustomerStories() {
 // Function to handle Contact Section
 function createContactSection() {
     // Select the button in the contact section
-    const contactButton = document.querySelector('.contact button');
+    const contactButton = document.querySelector('.contact button.cta-button');
     // Add an event listener to the button to trigger the requestConsultation function when clicked
     contactButton.addEventListener('click', requestConsultation);
+
+    // Select the contact form
+    const contactForm = document.querySelector('.contact-form');
+    // Add an event listener to handle form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactFormSubmit);
+    }
 }
 
 // Function to handle Request a Consultation button
 function requestConsultation() {
     // Display an alert thanking the user for their interest
     alert('Thank you for your interest! We will contact you soon for a consultation.');
+}
+
+
+
+
+
+
+
+
+// JavaScript for the Customer Stories Carousel
+
+function scrollCarousel(direction) {
+    const carousel = document.querySelector('.stories-carousel');
+    const scrollAmount = 300; // Adjust this to control how much to scroll
+    
+    if (direction === 'left') {
+        carousel.scrollBy({
+            top: 0,
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    } else if (direction === 'right') {
+        carousel.scrollBy({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Optional: Auto-scroll functionality
+let autoScrollInterval;
+function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+        scrollCarousel('right');
+    }, 5000); // Adjust the interval time as needed
+}
+
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+// Start auto-scroll when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    startAutoScroll();
+
+    // Pause auto-scroll on mouse enter and resume on mouse leave
+    const carousel = document.querySelector('.stories-carousel');
+    carousel.addEventListener('mouseenter', stopAutoScroll);
+    carousel.addEventListener('mouseleave', startAutoScroll);
+});
+
+
+
+
+
+
+// Function to handle Contact Form Submission (Newly Added)
+function handleContactFormSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Retrieve form values
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+
+    // Display an alert or process the form data as needed
+    alert(`Thank you, ${name}! Your message has been received. We will get back to you at ${email}.`);
+
+    // Optionally, you could add functionality here to send the data to a server or use an API
 }

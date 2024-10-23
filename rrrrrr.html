@@ -39,7 +39,6 @@
         <div class="container">
             <h2>Our Products</h2>
             <div class="products">
-
                 <div class="product">
                     <img src="SolarLIght.webp" alt="Solar LED Lighting">
                     <h3>Solar LED Lighting</h3>
@@ -63,14 +62,22 @@
                     <p>Other green energy products harness renewable resources to generate clean power, promoting sustainability and reducing emissions.</p>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
-    <!-- Mission Statement -->
+    <!-- Mission Statement (Updated to be more robust) -->
     <section id="about" class="mission">
         <div class="container">
             <h2>Our Mission</h2>
-            <p>Our mission is to provide affordable, independent renewable energy solutions for every home, reducing grid dependence, promoting energy conservation, and fostering a cleaner, greener future for all communities.</p>
+            <div class="mission-content"> <!-- Added a div to structure the mission section better -->
+                <div class="mission-text"> <!-- Added a div to separate text from image -->
+                    <p>Our mission is to provide affordable, independent renewable energy solutions for every home, reducing grid dependence, promoting energy conservation, and fostering a cleaner, greener future for all communities.</p>
+                </div>
+                <div class="mission-image"> <!-- New image element to visually enhance the mission statement -->
+                    <img src="missionStatementImage.webp" alt="Renewable Energy Mission"> 
+                </div>
+            </div>
         </div>
     </section>
 
@@ -78,29 +85,68 @@
     <section class="educational">
         <div class="container">
             <h2>Why Green Energy?</h2>
-            <p>Learn about the benefits of renewable energy, cost savings, and how it improves your quality of life while protecting the environment.</p>
-        </div>
-    </section>
-
-    <!-- Customer Stories -->
-    <section class="customer-stories">
-        <div class="container">
-            <h2>Customer Stories</h2>
-            <div class="stories">
-                <div class="story">
-                    <p>"Our solar panels have saved us thousands of rupees in electricity bills and made our community self-sufficient." - A Rural Customer</p>
+            <div class="educational-content"> <!-- Added a div to structure the section better -->
+                <div class="educational-text"> <!-- Added a text section for the educational content -->
+                    <p>Learn about the benefits of renewable energy, cost savings, and how it improves your quality of life while protecting the environment. Renewable energy is not just about saving money; it's about securing a sustainable future for generations to come.</p>
+                    <ul class="benefits-list"> <!-- Added a list for highlighting key benefits -->
+                        <li>Reduced carbon footprint</li>
+                        <li>Lower energy bills</li>
+                        <li>Energy independence</li>
+                        <li>Environmentally friendly</li>
+                    </ul>
                 </div>
-                <div class="story">
-                    <p>"Switching to green energy has helped us contribute to a cleaner planet." - An Urban Customer</p>
+                <div class="educational-image"> <!-- Added an image section to make it visually appealing -->
+                    <img src="EducationalHomePage Image.webp" alt="Benefits of Green Energy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Call to Action -->
+<!-- Customer Stories (Updated to be more engaging) -->
+<section class="customer-stories">
+    <div class="container">
+        <h2>Customer Stories</h2>
+        
+        <div class="stories-carousel">
+            <div class="story">
+                <div class="story-content">
+                    <img src="customer1.jpg" alt="Customer Image" class="customer-image">
+                    <p>"Our solar panels have saved us thousands of rupees in electricity bills and made our community self-sufficient."</p>
+                    <p class="customer-name">- A Rural Customer</p>
+                </div>
+            </div>
+            <div class="story">
+                <div class="story-content">
+                    <img src="customer2.jpg" alt="Customer Image" class="customer-image">
+                    <p>"Switching to green energy has helped us contribute to a cleaner planet."</p>
+                    <p class="customer-name">- An Urban Customer</p>
+                </div>
+            </div>
+            <div class="story">
+                <div class="story-content">
+                    <img src="customer3.jpg" alt="Customer Image" class="customer-image">
+                    <p>"The battery storage solutions have given us reliable power even during outages."</p>
+                    <p class="customer-name">- A Residential Customer</p>
+                </div>
+            </div>
+        </div>
+        <button onclick="scrollCarousel('left')" class="scroll-button">Scroll Left</button> <!-- Added scroll button for left direction -->
+        <button onclick="scrollCarousel('right')" class="scroll-button">Scroll Right</button> <!-- Added scroll button for right direction -->
+    </div>
+</section>
+
+
+    <!-- Contact & Call to Action (Updated for better visual appeal) -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get in Touch</h2>
+            <p class="contact-text">We'd love to hear from you! Whether you have a question about our products, need a consultation, or anything else, our team is ready to answer all your questions.</p> <!-- Added descriptive text -->
+            <form class="contact-form"> <!-- Added a form for user input -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
             <button class="cta-button" onclick="requestConsultation()">Request a Consultation</button>
         </div>
     </section>
