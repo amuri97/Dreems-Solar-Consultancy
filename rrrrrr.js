@@ -24,18 +24,7 @@ function exploreSolutions() {
     alert('Explore our green energy solutions to create a sustainable future!');
 }
 
-// Function to handle Product Highlights Section
-function createProductHighlights() {
-    // Select all product elements
-    const products = document.querySelectorAll('.product');
-    // Iterate through each product element and add an event listener for clicks
-    products.forEach(product => {
-        product.addEventListener('click', () => {
-            // Display an alert showing the product name when it is clicked
-            alert(`${product.querySelector('h3').textContent} selected! Learn more about this product.`);
-        });
-    });
-}
+
 
 // Function to handle Mission Statement Section
 function createMissionStatement() {
