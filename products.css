@@ -35,6 +35,7 @@ button:hover {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better contrast */
 }
 
 .navbar .container {
@@ -93,8 +94,8 @@ button:hover {
 }
 
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column; /* Changed to column layout to display each product one on top of the other */
     gap: 40px;
     margin-top: 20px;
     max-width: 1200px;
@@ -109,7 +110,7 @@ button:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column; /* Changed to column layout to place image and product info in a column */
+    flex-direction: column; /* Ensures image and product info are stacked in a column layout */
     gap: 20px;
     align-items: flex-start;
 }
@@ -120,14 +121,14 @@ button:hover {
 }
 
 .product img {
-max-width: 20%;
+    max-width: 33%; /* Reduced image size to one-third of the original */
     height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.solar-street-light-info {
+.solar-street-light-info, .biogas-plant-info, .solar-water-heater-info, .wind-energy-info, .solar-cooker-info, .solar-dryer-info {
     width: 100%; /* Ensures the info div takes up the full width below the image */
     text-align: left;
     margin-top: 0;
@@ -178,9 +179,9 @@ max-width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: #e8f5e9; /* Added background to icons for better emphasis */
     border-radius: 50%;
-    box-shadow: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon img {
@@ -207,6 +208,7 @@ max-width: 20%;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-weight: bold;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better emphasis */
 }
 
 .cta-button:hover {
@@ -257,6 +259,7 @@ max-width: 20%;
     background-color: #ffffff;
     border-radius: 10px;
     color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better contrast */
 }
 
 .contact-text {
@@ -283,6 +286,7 @@ max-width: 20%;
 .contact-form textarea:focus {
     outline: none;
     border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5); /* Added shadow for focus indication */
 }
 
 .contact button {
@@ -354,7 +358,7 @@ max-width: 20%;
     }
 
     .products {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Ensures products appear one on top of the other on smaller screens */
     }
 
     .services {
