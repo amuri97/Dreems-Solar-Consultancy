@@ -12,6 +12,10 @@ h1, h2, h3 {
     color: #2e7d32;
 }
 
+#hero-heading {
+    color: white;
+    font-family: sans-serif;
+}
 
 a {
     text-decoration: none;
