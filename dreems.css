@@ -546,3 +546,42 @@ button:hover {
   line-height: 1.6;
   font-size: 1rem;
 }
+
+
+/* —————————————————————————————————————————————
+   Services Section
+————————————————————————————————————————————— */
+.services {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.services h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.service-item img {
+  width: 40px;
+  height: auto;
+  margin-top: 5px;
+}
+.service-item p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
