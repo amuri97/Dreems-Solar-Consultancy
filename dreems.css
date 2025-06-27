@@ -587,32 +587,33 @@ button:hover {
 }
 
 /* —————————————————————————————————————————————
-   Hero Logo Overlay
+   Hero Logo Overlay (centered in the “Powering Tomorrow” band)
 ————————————————————————————————————————————— */
 .hero {
-  position: relative;    /* make it the positioning context */
+  position: relative;      /* establishes the positioning context */
 }
 
-
-
-/* —————————————————————————————————————————————
-   Hero Content & Inline Logo
-————————————————————————————————————————————— */
-.hero-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;           /* pushes both logo+heading down under navbar */
-}
-
-.hero-logo-inline img {
-  width: 160px;                /* tweak for legibility */
-  max-width: 30%;              /* keeps it responsive */
+.hero-overlay-logo {
+  position: absolute;
+  /* 30% down from the top of the hero: adjust as needed */
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* fixed size for readability */
+  width: 180px;
+  /* prevent it ever blowing up on narrow screens */
+  max-width: 30%;
   height: auto;
-  margin-bottom: 20px;         /* space between logo and heading */
-  background: rgba(255,255,255,0.8);
+  z-index: 5;
+
+  /* styling to make it pop */
+  background: rgba(255, 255, 255, 0.9);
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* push the hero-content down so it never covers the logo */
+.hero-content {
+  padding-top: 180px;      /* roughly logo height (180px) + 20px gap */
 }
