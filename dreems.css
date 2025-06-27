@@ -97,26 +97,47 @@ button:hover {
 }
 
 /* Hero Section */
+/* —————————————————————————————————————————————
+   Hero Section (single background) + Logo Overlay
+————————————————————————————————————————————— */
 .hero {
-    position: relative;
-  /* Two backgrounds: first your logo, second the hero image */
-  background-image: 
-    url('DreemsLogo.jpg'),
-    url('DalleHero.webp');
-  background-repeat: no-repeat, no-repeat;
-  /* Position logo about one-third down, centered horizontally, then hero center */
-  background-position: center 30%, center center;
-  /* Logo x-size auto height, hero covers fully */
-  background-size: 180px auto, cover;
-  
-  /* keep your existing layout */
+  /* only the hero image now */
+  background: url("DalleHero.webp") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #e0e0e0;
-  padding: 0 20px;            /* well remove the big top padding since logo is in CSS */
+  padding: 0 20px;
+  position: relative;  /*  enable the absolute .hero-logo */
+}
+
+/* new wrapper for your logo */
+.hero-logo {
+  position: absolute;
+  top: 75px;            /* just under your navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;           /* above the dark overlay box */
+}
+
+.hero-logo img {
+  display: block;
+  width: 200px;         /* large enough to read “DREEMS” */
+  max-width: 40%;       /* keeps it from overwhelming on mobile */
+  height: auto;
+  background: #fff;     /* white backing so text always shows */
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* push the dark hero-content box below the logo */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 140px;    /* clear the 200px logo plus some gap */
 }
 
 .hero-content {
@@ -593,29 +614,3 @@ button:hover {
   text-align: left;
 }
 
-/* —————————————————————————————————————————————
-   Hero Logo Overlay (centered in the “Powering Tomorrow” band)
-————————————————————————————————————————————— */
-
-
-/* Hero Logo Overlay via ::before */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 30%;                   /* drop into “POWERING TOMORROW” band */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 180px;               /* big enough to read “DREEMS” */
-  max-width: 30%;             /* but never too large on mobile */
-  height: auto;
-  background: url("DreemsLogo.jpg") no-repeat center center;
-  background-size: contain;
-  z-index: 2;                 /* above the hero bg, below the text box */
-}
-
-/* Ensure the dark text box slides below the overlaid logo */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding-top: 150px;         /* clear enough space for the 180px logo */
-}
