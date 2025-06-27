@@ -595,17 +595,18 @@ button:hover {
 
 .hero-logo {
   position: absolute;
-  top: 20%;              
+  top: 80px;              
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;           
+  transform: translateX(-50%);
+  z-index: 10;           
 }
 
 .hero-logo img {
-  width: 120px;
-  max-width: 20%;          
+  width: 200px;
+  max-width: 35%;          
   height: auto;
-  border: 2px solid rgba(255,255,255,0.8);
-  border-radius: 6px;
+  background: rgba(255,255,255,0.8);
+  padding: 8px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
