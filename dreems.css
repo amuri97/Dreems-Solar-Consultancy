@@ -585,3 +585,26 @@ button:hover {
   margin: 0;
   text-align: left;
 }
+
+/* —————————————————————————————————————————————
+   Hero Logo Overlay
+————————————————————————————————————————————— */
+.hero {
+  position: relative;    /* make it the positioning context */
+}
+
+.hero-logo {
+  position: absolute;
+  top: 25%;              /* adjust up/down until it sits where you want */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;           /* ensure it’s above the hero image */
+}
+
+.hero-logo img {
+  width: 120px;          /* tweak size as needed */
+  height: auto;
+  border: 3px solid rgba(255,255,255,0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
