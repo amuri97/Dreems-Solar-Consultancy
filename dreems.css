@@ -98,6 +98,7 @@ button:hover {
 
 /* Hero Section */
 .hero {
+    position: relative;
   /* Two backgrounds: first your logo, second the hero image */
   background-image: 
     url('DreemsLogo.jpg'),
@@ -597,3 +598,24 @@ button:hover {
 ————————————————————————————————————————————— */
 
 
+/* Hero Logo Overlay via ::before */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 30%;                   /* drop into “POWERING TOMORROW” band */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;               /* big enough to read “DREEMS” */
+  max-width: 30%;             /* but never too large on mobile */
+  height: auto;
+  background: url("DreemsLogo.jpg") no-repeat center center;
+  background-size: contain;
+  z-index: 2;                 /* above the hero bg, below the text box */
+}
+
+/* Ensure the dark text box slides below the overlaid logo */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;         /* clear enough space for the 180px logo */
+}
