@@ -98,18 +98,24 @@ button:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('DalleHEro.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 150px 20px;
-    text-align: center;
-    color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+  /* Two backgrounds: first your logo, second the hero image */
+  background-image: 
+    url('DreemsLogo.jpg'),
+    url('DalleHero.webp');
+  background-repeat: no-repeat, no-repeat;
+  /* Position logo about one-third down, centered horizontally, then hero center */
+  background-position: center 30%, center center;
+  /* Logo x-size auto height, hero covers fully */
+  background-size: 180px auto, cover;
+  
+  /* keep your existing layout */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #e0e0e0;
+  padding: 0 20px;            /* well remove the big top padding since logo is in CSS */
 }
 
 .hero-content {
@@ -593,27 +599,3 @@ button:hover {
   position: relative;      /* establishes the positioning context */
 }
 
-.hero-overlay-logo {
-  position: absolute;
-  /* 30% down from the top of the hero: adjust as needed */
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* fixed size for readability */
-  width: 180px;
-  /* prevent it ever blowing up on narrow screens */
-  max-width: 30%;
-  height: auto;
-  z-index: 5;
-
-  /* styling to make it pop */
-  background: rgba(255, 255, 255, 0.9);
-  padding: 8px;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* push the hero-content down so it never covers the logo */
-.hero-content {
-  padding-top: 180px;      /* roughly logo height (180px) + 20px gap */
-}
