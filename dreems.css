@@ -595,7 +595,5 @@ button:hover {
 /* —————————————————————————————————————————————
    Hero Logo Overlay (centered in the “Powering Tomorrow” band)
 ————————————————————————————————————————————— */
-.hero {
-  position: relative;      /* establishes the positioning context */
-}
+
 
