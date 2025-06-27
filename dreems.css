@@ -113,7 +113,7 @@ button:hover {
 /* Logo wrapper: fills the white band under the navbar */
 .hero-logo {
   position: absolute;
-  top: 65px;            /* sits immediately under your navbar */
+  top: 0;            /* sits immediately under your navbar */
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;           /* above the dark overlay */
