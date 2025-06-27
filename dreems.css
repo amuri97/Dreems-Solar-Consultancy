@@ -593,18 +593,24 @@ button:hover {
   position: relative;    /* make it the positioning context */
 }
 
-.hero-logo {
-  position: absolute;
-  top: 80px;              
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;           
+
+
+/* —————————————————————————————————————————————
+   Hero Content & Inline Logo
+————————————————————————————————————————————— */
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;           /* pushes both logo+heading down under navbar */
 }
 
-.hero-logo img {
-  width: 200px;
-  max-width: 35%;          
+.hero-logo-inline img {
+  width: 160px;                /* tweak for legibility */
+  max-width: 30%;              /* keeps it responsive */
   height: auto;
+  margin-bottom: 20px;         /* space between logo and heading */
   background: rgba(255,255,255,0.8);
   padding: 8px;
   border-radius: 8px;
